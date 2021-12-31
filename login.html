@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title> FORM VALIDATION</title>
+        <link rel="icon" type="img/png" href="login.png">
+        <link rel="stylesheet" href="form.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        </head>
+    <body>
+      <header>
+        <div>
+        <img src="formimg/travel1.jpg" width="100%" 
+        height="15%" >
+        </div>
+        <h2 class="centerdiv">Ticket Booking</h2>
+        </header>
+        <!--<div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>-->
+      <!--
+        
+        <ul>
+          <li>
+            <a href="#">
+              <div class="icon">
+              <i class="fa fa-plane" aria-hidden="true"></i>
+              <i class="fa fa-plane" aria-hidden="true"></i>
+              </div>
+              <div class="name"><span data-text="Flight">Flight</span></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="icon">
+              <i class="fa fa-train" aria-hidden="true"></i>
+                <i class="fa fa-train" aria-hidden="true"></i>
+              </div>
+              <div class="name"><span data-text="Train">Train</span></div>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="icon">
+                <i class="fa fa-bus" aria-hidden="true"></i>
+              <i class="fa fa-bus" aria-hidden="true"></i>
+              </div>
+              <div class="name"><span data-text="Bus">Bus</span></div>
+            </a>
+          </li>
+          
+
+        </ul>
+      -->
+     
+      <section class="main_bg">
+        <div class="form">
+          <div class="form-text">
+            <h1><span><img src="formimg/book.jpg" height="50"></span></h1>
+            <p>&ldquo; Live with no excuses and travel with no regrets&rdquo;<br> ~ Oscar Wilde. </p>
+          </div>
+          <div class="main-form">
+            <form action="index.php" method="get">
+             <!-- <div >
+                <span>One way</span>
+                <input type="radio" name="oneway" id="oneway">
+              </div>
+              <div >
+                <span>Multi-city</span>
+                <input type="radio" name="oneway" id="oneway">
+              </div>
+              <div >
+                <span>Return</span>
+                <input type="radio" name="oneway" id="oneway">
+              </div>-->
+              <div>
+                <span>Name</span>
+                <input type="text" name="name" id="name" required minlength="4" maxlength="15" required>
+              </div>
+              
+              <div>
+                <span>Phone number</span>
+                <input type="tel" name="phonenumber" id="phonenumber"  pattern="[0-9]{10}" required>
+              </div>
+
+              <div>
+                <span>Email Address</span>
+                <input type="text" name="name" id="name" >
+              </div>
+
+              <div>
+                <span>No. of passengers</span>
+                <input type="number" name="number" id="number" min="1" required>
+              </div>
+
+              <div>
+                <span>Departure Location</span>
+                <input type="text" name="name" id="name" required>
+              </div>
+              <div>
+                <span>Departure Date</span>
+                <input type="date" name="ddate" id="ddate" required>
+              </div>
+
+              <div>
+                <span>Arrival Location</span>
+                <input type="text" name="name" id="name" required>
+              </div>
+      <!--<div>
+                <span>Arrival Date</span>
+                <input type="date" name="date" id="date" required>
+              </div>-->
+
+              <div id="submit">
+               <input type="submit" value="SUBMIT" id="submit">
+          </div>
+        </div>
+        </div>
+        </section>
+        </body>
+        </html>
+        
+      
+      <!--<div class="wrapper">
+        <div class="button">
+          <div class="icon">
+            <i class="fa fa-plane"></i>
+          </div>
+          <span>Flight</span>
+        </div>
+
+        <div class="button">
+          <div class="icon">
+            <i class="fa fa-train"></i>
+          </div>
+          <span>Train</span>
+        </div>
+
+        <div class="button">
+          <div class="icon">
+            <i class="fa fa-bus"></i>
+          </div>
+          <span>Bus</span>
+        </div>
+
+      </div>-->
+      <!--<section class="banner" id="banner">
+      <div class="content">
+      
+      <div class="centerdiv">
+      <a href=""target="_blank">
+      <i class="fa  fa-4x fa-plane "></i></a>
+      <a href=""target="_blank">
+      <i class="fa  fa-3x fa-train "></i></a>
+      <a href=""target="_blank">
+      <i class="fa fa-3x fa-bus "></i></a> -->
+      <!--<li><a href="" target="_blank">Flight</a></li>
+      <li><a href="" target="_blank">Train</a></li>
+      <li><a href="" target="_blank">Bus</a></li>-->
+     <!-- </div>  
+      </div>
+      </section>       
+           <form>
+            <input type="radio" id="one way" name="oneway" value="ONEWAY">
+            <label for="oneway">One way</label><br>
+             <div>
+            Name <input type="text" id="firstname" name="Name" placeholder="Enter your name"  required minlength="4" maxlength="15" required>
+           </div>
+           <div>
+          Age <input type="date" id="age" name="Age" placeholder="Enter date of birth" required >
+          </div>
+          <div>
+            Departure Date<input type="date" id="dept" name="dept" placeholder="Departure Date" required>
+          </div>
+          <div>
+              <button> SUBMIT</button>
+        </div>  
+            </form>-->
+            
+        
+   
+   
+
+    <!--<style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+    </style>-->
+<!--</head>
+
+<body>
+    <form>
+      <div>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input id="choose" name="i_like" required minlength="6" maxlength="6">
+      </div>
+     <div>
+        <label for="number">How many would you like?</label>
+        <input type="number" id="number" name="amount" value="1" min="1" max="10">
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+</body>
+
+</html>-->
+
