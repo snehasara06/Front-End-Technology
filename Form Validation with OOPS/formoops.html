@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Registration Form</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="new.css">
+    </head>
+    <body>
+        <div class="container">
+           <h1>Ticket Booking</h1>
+           <form class="form-group" action="">
+           <div class="row">
+               <label class="col-4">Name</label>
+               <input type="text" class="form-control" id="firstName" placeholder=" Name" required>
+               <div class="invalid-sentence" id="firstNameError">
+              </div>               
+           </div>          
+            <div class="row">
+               <label class="col-4">Phone</label>
+               <input type="text" class="form-control" id="phone" placeholder="Phone number">
+                <div class="invalid-sentence" id="phoneError">                   
+               </div>
+            </div>
+            <div class="row">
+                <label class="col-4">Email ID</label>
+                <input type="text" class="form-control" id="email" placeholder="Email ID">
+                <div class="invalid-sentence" id="emailError">                   
+                </div>
+             </div>            
+            </div>
+            <div class="row">
+                <label class="col-4">Arrival</label>
+                <select class="form-control" id="ticket">
+                    <option value="Option 1">Mumbai</option>
+                    <option value="Option 2">Chennai</option>
+                    <option value="Option 3">Bangalore</option>
+                    <option value="Option 3">New Delhi</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="col-4">Arrival Date</label>
+                <input type="date" class="form-control" id="email" placeholder="Email ID">
+                <div class="invalid-sentence" id="emailError">                    
+                </div>
+             </div>
+            <div class="row">
+                <label class="col-4">Destination</label>
+                <select class="form-control" id="ticket">
+                <option value="Option 1">Mumbai</option>
+                <option value="Option 2">Chennai</option>
+                <option value="Option 3">Bangalore</option>
+                <option value="Option 3">New Delhi</option>
+                </select>
+            </div>
+            <div class="row">
+                <label class="col-4">Departure Date</label>
+                <input type="date" class="form-control" id="email" placeholder="Email ID">
+                <div class="invalid-sentence" id="emailError">                    
+                </div>
+             </div>
+            <div class="row">
+                <label class="col-4">Ticket Type</label>
+                <select class="form-control" id="ticket">
+                    <option value="Option 1">One way</option>
+                    <option value="Option 2">Round trip</option>
+                    <option value="Option 3">Multi way</option>
+                </select>
+            </div>
+            <div class="row-gender">
+                <label class="col-4">Gender</label>
+                <input type="radio" id="male" value="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" value="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+            <div class="row">
+                <label class="col-4">No of passengers</label>
+                <input type="number" class="form-control" id="email" placeholder="no.of passengers" min="1">
+                <div class="invalid-sentence" id="emailError">                    
+                </div>
+             </div>
+            <div class="row">
+                 <input class="button-primary" id="book now" type="submit" value="Book Now" src="www.google.com">
+            </div>
+           </form>
+        </div>
+        <script src="new.js"></script>
+    </body>
+</html>
