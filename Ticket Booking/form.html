@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <head>
+            <link rel="stylesheet" href="login.css">
+        <title> FORM VALIDATION</title>
+        
+<!--        <h2>Form</h2>-->
+        <script type='text/javascript'>
+            function formValidation()
+{
+
+var uname = document.form1.username;
+var uphone=document.form1.phone;
+var ucountry = document.form1.country;
+var uemail = document.form1.email;
+var umsex = document.form1.msex;
+var ufsex = document.form1.fsex;
+             {
+ 	        if(allLetter(uname))
+                  {
+                      if(phonenumber(uphone))
+              {  
+              if(countryselect(ucountry))
+                {
+
+                    {
+                      if(ValidateEmail(uemail))
+                         {
+                         // if(validsex(umsex,ufsex))
+                             if(validategender(form))
+                         {
+window.location="form-valid.html";
+}
+}
+
+}
+ }	
+   }
+     }
+       
+return false;
+}
+  unction allLetter(uname)
+{ 
+        var letters = /^[A-Za-z]+$/;
+        if(uname.value.match(letters))
+        {
+        return true;
+        }
+        else
+        {
+        alert('Please input alphabet characters only');
+        uname.focus();
+        return false;
+        }
+}
+  function phonenumber(uphone)
+{
+      var phoneno = /^\d{10}$/;
+      if(uphone.value.match(phoneno))
+      {
+      return true;
+      }
+      else
+      {
+      alert("Not a valid Phone Number");
+      return false;
+      }
+}        
+            
+function countryselect(ucountry)
+    {
+	if(ucountry.value == "PS")
+    {
+	alert('Select your country from the list');
+	ucountry.focus();
+	return false;
+	}
+    else
+    {
+	return true;
+	}
+}
+  function ValidateEmail(uemail)
+    {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(uemail.value.match(mailformat))
+    {
+    return true;
+    }
+    else
+    {
+    alert("You have entered an invalid email address!");
+    uemail.focus();
+    return false;
+    }
+}
+  function validategender(form){
+ErrorText= "";
+if ( ( form.gender[0].checked == false ) && ( form.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+return false;
+}
+if (ErrorText= "") { form.submit() }
+}
+            
+     
+            </script>
+</head>
+<body onload="document.form1.userid.focus();">
+  <div class="container">
+    <div class="title">Ticket Booking Form</div>
+    
+    <form name='form1' onsubmit='return formValidation()'  action="#">
+      
+    <div class="user-details">
+<!--        NAME-->
+      <div class="input-box">
+          <span class="details">Name</span>
+            <input type="text" placeholder="Name" name="username" >
+      </div>
+<!--        PHONE NUMBER-->
+        <div class="input-box">
+          <span class="details">Phone number</span>
+            <input type="text" placeholder="Ph.num" name="phone"  >
+      </div>
+<!--        EMAIL ID-->
+        <div class="input-box">
+          <span class="details">Email ID</span>
+            <input type="text" placeholder="Email" name="email" >
+      </div>
+<!--        GENDER-->
+        <div class="gender-details">
+            <!--<input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">-->
+          <span class="gender-title">Gender</span><br>
+          <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+          </div>
+<!--        TRIP TYPE-->
+        <div class="trip-type"> 
+          <span class="trip-title">Trip Type</span><br>
+          <input type="radio" name="trip" value="One way"> One way
+          <input type="radio" name="trip" value="Round Trip"> Round Trip
+          <input type="radio" name="trip" value="Multi way"> Multi way
+</div>
+      
+<!--      DEPARTURE  -->
+        <div class="input-box">
+          <span class="details">Departure Location</span>
+            <input type="text" placeholder="Depature" >
+      </div>
+<!--        DATE1-->
+        <div class="input-box">
+          <span class="details">Departure Date</span>
+            <input type="date" placeholder="">
+      </div>
+<!--        ARRIVAL-->
+        <div class="input-box">
+          <span class="details">Arrival Location</span>
+            <input type="text" placeholder="Arrival">
+      </div>
+<!--        DATE2-->
+        <div class="input-box">
+          <span class="details">Arrival Date</span>
+            <input type="date" placeholder="Name" >
+      </div>
+      <!--       PASSENGER COUNT -->
+        <div class="input-box">
+          <span class="details">No.of passengers</span>
+            <input type="number" placeholder="No.of.passenger" min="1" >
+      </div>
+        </div>
+        <div class="button">
+        <input type="submit" value="Register"></div>
+      </form>
+</body>
+</html>
