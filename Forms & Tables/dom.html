@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Employee Data</h2>
+    <form >
+
+        <label >Name</label><br>
+            <input type="text" id="ename" placeholder="Enter your name" ><br>
+        <label >Email ID</label><br>
+            <input type="text" id="email" placeholder="Enter your email id" ><br>
+        <label >Phone number</label><br>
+            <input type="tel" id="ephone" placeholder="Enter your phone number" ><br>
+        <label >Practice</label><br>
+            <input type="text" id="epractice" placeholder="Enter your practice" ><br>
+        <label>College Name</label><br>
+            <input type="text" id="eclg" placeholder="Enter your college name" ><br><br>
+        <input type="button" value="SUBMIT" onclick="insertData()">
+
+    </form>
+    <table id="data">
+        <h3>Employee Table</h3>
+        <tr>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Phone number</th>
+            <th>Practice</th>
+            <th>College Name</th>
+        </tr>
+    </table>
+    <script>
+       
+       function insertData(){
+            var table=document.getElementById('data');
+            
+            var row=document.createElement('tr');
+            var d1=document.createElement('td');
+            var d2=document.createElement('td');
+            var d3=document.createElement('td');
+            var d4=document.createElement('td');
+            var d5=document.createElement('td');
+
+            d1.innerHTML=document.getElementById('ename').value;
+            d2.innerHTML=document.getElementById('email').value;
+            d3.innerHTML=document.getElementById('ephone').value;
+            d4.innerHTML=document.getElementById('epractice').value;
+            d5.innerHTML=document.getElementById('eclg').value;
+
+            row.appendChild(d1);
+            row.appendChild(d2);
+            row.appendChild(d3);
+            row.appendChild(d4);
+            row.appendChild(d5);
+
+
+            table.children[0].appendChild(row);
+            
+        
+       }
+
+    </script>
+</body>
+</html>
