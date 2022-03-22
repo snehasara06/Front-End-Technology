@@ -1,0 +1,67 @@
+/*#data{
+   /* border-style: dotted;
+   border-style: ridge;
+   border-color: darkblue;
+   border-width: 5px;
+}*/
+*{
+    box-sizing: border-box;
+   
+  }
+  
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    height:50%;
+
+}
+input[type=submit]{
+    
+    background-color: rgb(33, 131, 223);
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+ /*   border-radius: 4px;*/
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+  
+  }
+.container{
+    padding: 10px ;
+    background-color:skyblue;
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+input[type=text],
+input[type=email],
+input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+@media screen and (max-width:500px){
+body{
+    
+    width: 100%;
+    margin-top: 0;
+}
+.data,.field ,input[type=submit]{
+    width:100%;
+    margin-top: 0;
+}
+
+}       
