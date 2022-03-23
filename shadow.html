@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class PersonName extends HTMLElement{
+            constructor(){
+                super();
+                
+                let shadow=this.attachShadow({mode:'closed'});
+                let root=document.createElement('div');
+
+                let firstName=document.createElement('label');
+                firstName.innerText='First Name:';
+
+                let lastName=document.createElement('label');
+                lastName.innerText='Last Name: ';
+
+                let firstLabel=document.createElement('input');
+                let lastLabel=document.createElement('input');
+
+                root.append(firstName);
+                root.append(firstLabel);
+                root.append(document.createElement('br'));
+                root.append(lastName);
+                root.append(lastLabel);
+
+                let output=document.createElement('outputtxt');
+                root.append(document.createElement('br'));
+                root.append(output);
+
+                this.nameChange=()=>{
+                    output.innerHTML=`Hi ${firstName.value} ${lastName.value}`;
+                }
+
+                firstName.addEventListener('change',this.nameChange);
+                lastName.addEventListener('change',this.nameChange);
+
+                shadow.append(root);
+
+            }
+        }
+        customElements.define('person-name',PersonName);
+    </script>
+    <person-name></person-name>
+</body>
+</html>
+
