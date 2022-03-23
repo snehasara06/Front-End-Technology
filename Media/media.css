@@ -1,9 +1,4 @@
-/*#data{
-   /* border-style: dotted;
-   border-style: ridge;
-   border-color: darkblue;
-   border-width: 5px;
-}*/
+
 *{
     box-sizing: border-box;
    
@@ -53,15 +48,28 @@ input[type=password]{
     resize: vertical;
   }
   
-@media screen and (max-width:500px){
+@media screen and (max-width:800px){
 body{
     
     width: 100%;
     margin-top: 0;
 }
+img{
+  width:70%;
+}
+@media screen and (max-width:500px){
+  body{
+      
+      width: 80%;
+      margin-top: 0;
+  }
+  img{
+    width:50%;
+  }
 .data,.field ,input[type=submit]{
     width:100%;
     margin-top: 0;
 }
 
-}       
+}
+}
