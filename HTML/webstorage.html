@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+   <h2>WEB STORAGE</h2>
+
+    <button onclick="clickCountlocal()" type="button">Local Storage</button>
+    <p>Number of clicks(Local Storage)</p>
+    <p id="demo"></p>
+
+    <button onclick="clickCountsession()" type="button">Session Storage</button>
+    <p>Number of clicks(Session Storage)</p>
+    <p id="demo1"></p>
+
+    <p>Name is:</p>
+    <p id="demo2"></p>
+
+
+    <script>
+    clickCountlocal=()=>{
+        if(localStorage.count)
+        {
+            localStorage.count=Number(localStorage.count)+1;
+        }
+        else{
+            localStorage.count=1;
+        }
+        document.getElementById("demo").innerHTML=localStorage.count;
+    }
+    clickCountsession=()=>{
+    if(sessionStorage.count){
+        sessionStorage.count=Number(sessionStorage.count)+1;
+    }
+    else{
+        sessionStorage.count=1;
+    }
+    document.getElementById("demo1").innerHTML=sessionStorage.count;
+    }
+
+    localStorage.setItem("name",'sneha');
+    document.getElementById("demo2").innerHTML=localStorage.getItem("name");
+    
+    </script>
+</body>
+</html>
