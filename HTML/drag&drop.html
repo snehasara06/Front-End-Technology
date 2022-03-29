@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Drag & Drop</title>
+        <style>
+
+            .dropbox {
+                width: 350px;
+                height: 40px;
+                padding: 15px;
+                border: 10px solid #292828;
+            }
+
+        </style>
+
+
+        <script>
+            function dropAt(event) {
+                var data = event.dataTransfer.getData("Text");
+                event.target.appendChild(document.getElementById(data));
+                event.preventDefault();
+            }
+        
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+        
+            function dragOn(event) {
+                event.dataTransfer.setData("Text", event.target.id);
+            }
+        </script>
+    </head>
+ 
+    <body>
+        <h2>Drag and Drop Text</h2>
+        <div class="dropbox"
+                ondrop="dropAt(event)"
+                ondragover="allowDrop(event)">
+        </div>
+            <p id="drag1"
+                draggable="true"
+                ondragstart="dragOn(event)">
+                Hello World!!!
+            </p>
+    </body>
+</html>
