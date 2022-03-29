@@ -2,67 +2,69 @@
 <html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <head>
         <title> FORM VALIDATION</title>
         <link rel="icon" type="img/png" href="login.png">
         <link rel="stylesheet" href="form.css">
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        </head>
+   </head>
+    
     <body>
-      <header>
-        <div>
-        <img src="formimg/travel1.jpg" width="100%" 
-        height="15%" >
-        </div>
-        <h2 class="centerdiv">Ticket Booking</h2>
+         <header>
+            <div>
+                <img src="formimg/travel1.jpg" width="100%" 
+                height="15%" >
+            </div>
+            <h2 class="centerdiv">Ticket Booking</h2>
         </header>
+        
        <section class="main_bg">
-        <div class="form">
-          <div class="form-text">
-            <h1><span><img src="formimg/book.jpg" height="50"></span></h1>
-            <p>&ldquo; Live with no excuses and travel with no regrets&rdquo;<br> ~ Oscar Wilde. </p>
-          </div>
+            <div class="form">
+                  <div class="form-text">
+                    <h1><span><img src="formimg/book.jpg" height="50"></span></h1>
+                    <p>&ldquo; Live with no excuses and travel with no regrets&rdquo;<br> ~ Oscar Wilde. </p>
+                  </div>
+                
           <div class="main-form">
-            <form action="index.php" method="get">
-              <div>
-                <span>Name</span>
-                <input type="text" name="name" id="name" required minlength="4" maxlength="15" required>
-              </div>
+            <form>
+                  <div>
+                        <span>Name</span>
+                        <input type="text" name="name" id="name" required minlength="4" maxlength="15" required>
+                  </div>
               
-              <div>
-                <span>Phone number</span>
-                <input type="tel" name="phonenumber" id="phonenumber"  pattern="[0-9]{10}" required>
-              </div>
+                  <div>
+                        <span>Phone number</span>
+                        <input type="tel" name="phonenumber" id="phonenumber"  pattern="[0-9]{10}" required>
+                  </div>
 
-              <div>
-                <span>Email Address</span>
-                <input type="text" name="name" id="name" >
-              </div>
+                  <div>
+                        <span>Email Address</span>
+                        <input type="text" name="name" id="name" >
+                  </div>
 
-              <div>
-                <span>No. of passengers</span>
-                <input type="number" name="number" id="number" min="1" required>
-              </div>
+                  <div>
+                        <span>No. of passengers</span>
+                        <input type="number" name="number" id="number" min="1" required>
+                  </div>
 
-              <div>
-                <span>Departure Location</span>
-                <input type="text" name="name" id="name" required>
-              </div>
-              <div>
-                <span>Departure Date</span>
-                <input type="date" name="ddate" id="ddate" required>
-              </div>
-
-              <div>
-                <span>Arrival Location</span>
-                <input type="text" name="name" id="name" required>
-              </div>
-              <div id="submit">
-               <input type="submit" value="SUBMIT" id="submit">
-          </div>
+                  <div>
+                        <span>Departure Location</span>
+                        <input type="text" name="name" id="name" required>
+                  </div>
+                  <div>
+                        <span>Departure Date</span>
+                        <input type="date" name="ddate" id="ddate" required>
+                  </div>
+                  <div>
+                        <span>Arrival Location</span>
+                        <input type="text" name="name" id="name" required>
+                  </div>
+                  <div id="submit">
+                        <input type="submit" value="SUBMIT" id="submit">
+                 </div>
+              </form>
         </div>
-        </div>
-        </section>
-        </body>
-        </html>
+       </div>
+     </section>
+  </body>
+</html>
